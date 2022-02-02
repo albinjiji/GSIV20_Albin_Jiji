@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
+import { AiFillHome } from "react-icons/ai";
 import Movie from "./components/Movie";
 
 const MOVIE_API =
@@ -23,6 +24,23 @@ function App() {
 
   return (
     <div>
+      <header>
+        <form onSubmit={handleOnSubmit}>
+          <input
+            className="searchinput"
+            type="text"
+            placeholder="&#61442;Search"
+            value={searchTerm}
+            onChange={handleOnChange}
+          />
+        </form>
+
+        <div className="home">
+          <a href="/" className="logo" style={{ textDecoration: "none" }}>
+            <AiFillHome className="icon" size={35} />
+          </a>
+        </div>
+      </header>
       <div className="movie-container">
         {movies.length > 0 &&
           movies.map((movie) => <Movie key={movie.id} {...movie} />)}
