@@ -1,0 +1,23 @@
+.movie {
+  width: 280px;
+  margin: 1rem;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 5px 5px 5px 5px rgba(0.1, 0.1, 0.1, 0.1);
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+.movie-list {
+  display: flex;
+  padding: 0.9rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.movie-list h5 {
+  margin: 0;
+}
