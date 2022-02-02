@@ -13,6 +13,7 @@ const SEARCH_API =
 
 function App() {
   const [movies, setMovies] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
   useEffect(() => {
     fetch(MOVIE_API)
@@ -21,6 +22,24 @@ function App() {
         setMovies(data.results);
       });
   }, []);
+
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+
+    if (searchTerm) {
+      fetch(SEARCH_API + searchTerm)
+        .then((res) => res.json())
+        .then((data) => {
+          setMovies(data.results);
+        });
+
+      setSearchTerm("");
+    }
+  };
+
+  const handleOnChange = (e) => {
+    setSearchTerm(e.target.value);
+  };
 
   return (
     <div>
