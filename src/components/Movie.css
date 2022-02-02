@@ -1,5 +1,5 @@
 .movie {
-  width: 280px;
+  width: 22%;
   margin: 1rem;
   border-radius: 5px;
   overflow: hidden;
@@ -14,10 +14,18 @@ img {
 .movie-list {
   display: flex;
   padding: 0.9rem;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .movie-list h5 {
   margin: 0;
+}
+
+.head {
+  font-size: 100%;
+}
+
+.rating {
+  font-size: 80%;
 }

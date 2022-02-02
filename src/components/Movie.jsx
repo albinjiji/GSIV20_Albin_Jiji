@@ -8,16 +8,13 @@ const Movie = ({ title, poster_path, overview, vote_average }) => {
     <div className="movie">
       <img src={IMG_API + poster_path} alt={title} />
       <div className="movie-list">
-        <h5>{title}</h5>
-        <span>
-          ⭐<b>{vote_average}</b>/10
+        <h5 className="head">{title}</h5>
+        <span className="rating">
+          ⭐<b>{vote_average}</b>
         </span>
       </div>
       <div>
-        <span
-          class="d-inline-block text-truncate"
-          style={{ maxWidth: "270px" }}
-        >
+        <span class="d-inline-block text-truncate" style={{ maxWidth: "100%" }}>
           {overview}
         </span>
       </div>
